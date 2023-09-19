@@ -7,15 +7,13 @@ from shorter import shorten_link
 # Load the values from the .env file
 load_dotenv()
 
-bot = telebot.TeleBot(os.getenv("TELEGRAM_TOKEN"))
+bot = telebot.TeleBot(os.getenv("BOT_TOKEN"))
 
 START_COMMAND = "/start"
 SHORT_COMMAND = "/short"
 ABOUT_COMMAND = "/about"
 
 current_cmd = None
-
-
 
 @bot.message_handler(commands=[START_COMMAND, 'start',"ayuda", "help"])
 def handle_start_command(message):
@@ -67,8 +65,9 @@ def handle_text_message(message):
 
     elif current_cmd == "short":
         res_shorted_link = shorten_link(message.text)
-        if res_shorted_link["error"]:
-          res_msg = f'🤖❌: {res_shorted_link["message"].capitalize()}'
+        error = res_shorted_link["error"]
+        if error:
+          res_msg = f'🤖❌: {error.capitalize()}'
           bot.send_message(current_chat_id, res_msg)
 
         else:
