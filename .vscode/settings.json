@@ -3,5 +3,5 @@
 		"editor.defaultFormatter": "ms-python.black-formatter"
 	},
 	"python.formatting.provider": "none",
-	"cSpell.words": ["pyshorteners", "telebot"]
+	"cSpell.words": ["pyshorteners", "shortcode", "telebot"]
 }
