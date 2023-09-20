@@ -1,28 +1,22 @@
-# Telegram Link Shortener Bot
-This is a Telegram bot that can be used to shorten URLs.
+# Telegram Multi-Tasking Bot
+Welcome to the Telegram Multi-Tasking Bot, a powerful and versatile bot that offers multiple capabilities, including link shortening with Bitly and Instagram media downloading. This bot simplifies various tasks for you, and in the near future, it will be equipped with even more helpful features.
 
-## How to Use
-1. Start the bot by sending a message with the command "/start".
-2. To shorten a link, send a message with the command "/short" or one of its aliases: "acortar", "shortener".
-3. The bot will prompt you to insert the URL to shorten.
-4. After entering the URL, the bot will return the shortened link.
+# Features
 
-## Commands
-The following commands are available for the bot:
+## Bitly Link Shortening
+- With this bot, you can easily shorten long URLs using the Bitly API. Just send the URL you want to shorten, and the bot will provide you with a shortened link.
 
-- /start, ayuda, help: Displays a welcome message.
-- /short, acortar, shortener: Prompts for the URL to shorten.
-- /about, acerca, aboutme: Displays information about the bot.
+## Instagram Media Downloader
+- Downloading Instagram media has never been easier. You can use this bot to grab both images and videos from Instagram posts by simply sharing the URL of the post.
 
-## Installation
-1. Clone this repository.
-2. Install the required packages by running pip install -r requirements.txt.
-3. Create a .env file and add your Telegram bot token as the value for the TELEGRAM_TOKEN key. Example: TELEGRAM_TOKEN=1234567890:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv.
-4. Run the bot by executing python main.py.
+## More Features Coming Soon
+Stay tuned for future updates! We are constantly working on adding new and useful functionalities to this bot to make it even more versatile.
 
-## Dependencies
-os
-dotenv
-telebot
-threading
-shorter (a custom module created by the developer)
+# Commands
+Here are the available commands for the bot:
+
+- /help, ayuda, help: Displays a welcome message and provides guidance on how to use the bot.
+- /short, acortar, shortener: Shorten a URL using the Bitly API. The bot will prompt you to enter the URL.
+- /about, acerca, aboutme: Get information about the bot.
+- /igimage: Download an Instagram picture post. Share the Instagram post URL to initiate the download.
+- /igvideo: Download an Instagram video post. Share the Instagram post URL to start the download.
