@@ -10,7 +10,6 @@ SHORTER_BASE_URL = os.getenv("SHORTER_BASE_URL")
 
 
 def shorten_link(full_link: str, link_name: str = "") -> dict:
-    print(full_link, "shorten links")
     try:
         shorteners = pyshorteners.Shortener(api_key=SHORTER_API_KEY)
         shorted_link = shorteners.bitly.short(full_link)
