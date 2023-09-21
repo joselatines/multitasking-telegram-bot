@@ -9,17 +9,13 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 def download_instagram_media_controller(message, command: str, media_type: str):
     if len(message.text) < 10:
-        error_message = (
-            f"🤖: Please insert a valid Instagram post URL. Example: https://www.instagram.com/p/CYZ9o4SrI58"
-        )
+        error_message = f"🤖: Please insert a valid Instagram post URL. Example: https://www.instagram.com/p/CYZ9o4SrI58"
         return bot.reply_to(message, error_message)
 
     ig_post_url = extract_command_msg(message.text, command)
 
     if not is_valid_url(ig_post_url):
-        error_message = (
-            f"🤖: Please insert a valid Instagram post URL. Example: https://www.instagram.com/p/CYZ9o4SrI58"
-        )
+        error_message = f"🤖: Please insert a valid Instagram post URL. Example: https://www.instagram.com/p/CYZ9o4SrI58"
         return bot.reply_to(message, error_message)
 
     response_message = (
@@ -53,6 +49,7 @@ def download_instagram_media_controller(message, command: str, media_type: str):
             f"🤖: An error has occurred while trying to download your {media_type}"
         )
         bot.send_message(message.chat.id, error_message)
+        bot.send_message(message.chat.id, "The URL MUST look like this https://www.instagram.com/p/CxY2AL7SjOG/")
         print("fatal error:", e)
 
 

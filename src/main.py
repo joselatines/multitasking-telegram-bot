@@ -43,7 +43,8 @@ def handle_short_link_command(message):
     Handles the '/short' command by sending a prompt for the link to shorten and setting the current command to 'short'.
     """
     bot.send_chat_action(message.chat.id, "typing")
-    short_link_controller(message)
+    msg = bot.send_message(message.chat.id, "Paste URL to short")
+    bot.register_next_step_handler(msg, short_link_controller)
 
 
 @bot.message_handler(commands=[parse_command(ABOUT_COMMAND), "acerca", "aboutme"])
