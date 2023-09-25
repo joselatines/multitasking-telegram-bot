@@ -121,5 +121,5 @@ if __name__ == "__main__":
     thread_bot = threading.Thread(name="thread bot", target=start_bot)
     thread_bot.start()
     print("🤖 Bot is running")
-    delete_all_files(IMAGES_PATH)
-    delete_all_files(VIDEOS_PATH, ".mp4")
+    """ delete_all_files(IMAGES_PATH)
+    delete_all_files(VIDEOS_PATH, ".mp4") """
